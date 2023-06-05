@@ -4,6 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Filters from './Filters';
+import { Link } from 'react-router-dom';
 
 const Flags = () => {
   const [restCountryData, setRestCountryData] = useState([]);
@@ -38,28 +39,30 @@ const Flags = () => {
                 className="card"
                 key={i}
               >
-                <CardMedia
-                  sx={{ height: 140 }}
-                  image={country.flags.png}
-                  title="green iguana"
-                />
-                <CardContent>
-                  <h3 className="countryName">{country.name.common}</h3>
-                  <h4 className="countryFacts">
-                    Population:{' '}
-                    <span className="normalWeight">
-                      {country.population.toLocaleString('en-US')}
-                    </span>
-                  </h4>
-                  <h4 className="countryFacts">
-                    Region:{' '}
-                    <span className="normalWeight">{country.region}</span>
-                  </h4>
-                  <h4 className="countryFacts">
-                    Capital:{' '}
-                    <span className="normalWeight">{country.capital}</span>
-                  </h4>
-                </CardContent>
+                <Link to={`/country/${country.cca3}`}>
+                  <CardMedia
+                    sx={{ height: 140 }}
+                    image={country.flags.png}
+                    title="green iguana"
+                  />
+                  <CardContent>
+                    <h3 className="countryName">{country.name.common}</h3>
+                    <h4 className="countryFacts">
+                      Population:{' '}
+                      <span className="normalWeight">
+                        {country.population.toLocaleString('en-US')}
+                      </span>
+                    </h4>
+                    <h4 className="countryFacts">
+                      Region:{' '}
+                      <span className="normalWeight">{country.region}</span>
+                    </h4>
+                    <h4 className="countryFacts">
+                      Capital:{' '}
+                      <span className="normalWeight">{country.capital}</span>
+                    </h4>
+                  </CardContent>
+                </Link>
               </Card>
             );
           })}

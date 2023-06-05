@@ -1,8 +1,4 @@
-:root{
-  --body_bg: #202c36;
-  --blue2: #2b3844;
-  --font_color: #fff;
-}
+@import url('variables.css');
 
 h1, p {
   color: var(--font_color);

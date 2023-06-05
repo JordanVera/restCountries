@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
-
-:root{
-  --body_bg: #202c36;
-  --blue2: #2b3844;
-}
+@import url('variables.css');
 
 body {
   background-color: var(--body_bg);
@@ -20,6 +16,11 @@ h1,h2,h3,h4,h5,h6, p {
 
 #themeButton {
   text-align: right !important;
+}
+
+.appbarHeader {
+  color: var(--font_color);
+  text-decoration: none !important;
 }
 
 .countryName {
@@ -65,6 +66,11 @@ h1,h2,h3,h4,h5,h6, p {
   background-color: var(--blue2) !important;
 }
 
+.card a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .filters {
   margin: 2rem 0;
   width: 100%;
@@ -92,6 +98,11 @@ ul {
 
  li {
   background-color: var(--blue2) !important;
+}
+
+li a {
+  color: var(--font_color);
+  text-decoration: none;
 }
 
  .MuiAutocomplete-root  {

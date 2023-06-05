@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
+import { Link } from 'react-router-dom';
 
 export default function ButtonAppBar() {
   return (
@@ -14,16 +15,9 @@ export default function ButtonAppBar() {
             <div className="grid-container">
               <div className="left-element">
                 {' '}
-                <IconButton
-                  href="/"
-                  size="large"
-                  edge="start"
-                  color="inherit"
-                  aria-label="menu"
-                  sx={{ mr: 2 }}
-                >
-                  <h5 className="appbarHeader">Where in the world?</h5>
-                </IconButton>
+                <Link to="/">
+                  <h4 className="appbarHeader">Where in the world?</h4>
+                </Link>
               </div>
               <div className="right-element">
                 <IconButton size="small" edge="start">

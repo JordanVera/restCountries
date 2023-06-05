@@ -8,6 +8,7 @@ import {
   MenuItem,
   Autocomplete,
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Filters = ({
   restCountryData,
@@ -16,7 +17,9 @@ const Filters = ({
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const countryNames = restCountryData.map((country) => country.name.common);
+  const countryNames = restCountryData.map((country) => {
+    return { common: country.name.common, cca3: country.cca3 };
+  });
 
   const handleRegionFilter = (e) => {
     const filteredData = restCountryData.filter(
@@ -34,14 +37,14 @@ const Filters = ({
           autoHighlight
           options={countryNames}
           onChange={(e) => setSearchQuery(e.target.value)}
-          getOptionLabel={(option) => option}
+          getOptionLabel={(option) => option.common}
           renderOption={(props, option) => (
             <Box
               component="li"
               sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
               {...props}
             >
-              {option}
+              <Link to={`/country/${option.cca3}`}>{option.common}</Link>
             </Box>
           )}
           renderInput={(params) => (
