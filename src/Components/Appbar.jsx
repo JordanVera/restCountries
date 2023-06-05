@@ -15,6 +15,7 @@ export default function ButtonAppBar() {
               <div className="left-element">
                 {' '}
                 <IconButton
+                  href="/"
                   size="large"
                   edge="start"
                   color="inherit"

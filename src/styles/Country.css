@@ -1,0 +1,50 @@
+:root{
+  --body_bg: #202c36;
+  --blue2: #2b3844;
+  --font_color: #fff;
+}
+
+h1, p {
+  color: var(--font_color);
+}
+
+p {
+  font-weight: 200;
+}
+
+.bold{ 
+  font-weight: 900;
+}
+
+#countryFlag {
+   height: 100% !important;
+}
+
+#backButton {
+  background-color: var(--blue2);
+  margin: 3rem 0 !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.countryContainer {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+}
+
+
+@media screen and (max-width: 900px) {
+  .countryContainer {
+    grid-template-columns: 1fr; 
+  }
+  .stats {
+    grid-template-columns: 1fr; 
+  }
+}

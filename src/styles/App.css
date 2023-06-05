@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root{
   --body_bg: #202c36;
@@ -11,7 +11,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6, p {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 #root {
@@ -82,21 +82,32 @@ h1,h2,h3,h4,h5,h6, p {
   justify-self: end; 
 }
 
-.filters .MuiInputBase-root {
+.filters .MuiInputBase-root{
   background-color: var(--blue2);
 }
 
-.MuiFormControl-root  {
-  width: 480px;
+ul {
+  padding: 0 !important;
 }
 
-@media screen and (max-width: 900px) {
-  .MuiFormControl-root {
-    width: 100% !important;
-  }
+ li {
+  background-color: var(--blue2) !important;
+}
 
-  .filters .left-element {
-    width: 100%;
+ .MuiAutocomplete-root  {
+  width: 380px !important;
+}
+
+ .MuiFormControl-root #filter  {
+  width: 200px;
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+  .MuiAutocomplete-root{
+    width: 100% !important;
   }
 
   .filters {
