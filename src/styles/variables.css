@@ -3,3 +3,9 @@
   --blue2: #2b3844;
   --font_color: #fff;
 }
+
+[data-theme="light"] {
+  --body_bg: #fafafa;
+  --blue2: #fff;
+  --font_color: #000;
+}

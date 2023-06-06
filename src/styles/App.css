@@ -18,13 +18,27 @@ h1,h2,h3,h4,h5,h6, p {
   text-align: right !important;
 }
 
+#appbar .icon {
+  color: var(--font_color);
+  padding-right: 1rem;
+}
+
 .appbarHeader {
   color: var(--font_color);
+  text-decoration: none !important;
+  font-size: 20px;
+}
+
+.appbarLink {
   text-decoration: none !important;
 }
 
 .countryName {
   font-size: 20px !important;
+}
+
+.themeToggle {
+  font-weight: 400;
 }
 
 .countryFacts {
@@ -67,7 +81,7 @@ h1,h2,h3,h4,h5,h6, p {
 }
 
 .card a {
-  color: #fff;
+  color: var(--font_color);
   text-decoration: none;
 }
 
