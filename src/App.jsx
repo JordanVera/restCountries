@@ -13,7 +13,7 @@ const App = () => {
     <ThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/restCountries" element={<Home />} />
           <Route path="/country/:code" element={<CountryData />} />
           {/* <Route path="/*" element={<NotFound />} /> */}
         </Routes>
