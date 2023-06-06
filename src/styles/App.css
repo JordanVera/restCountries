@@ -26,7 +26,7 @@ h1,h2,h3,h4,h5,h6, p {
 .appbarHeader {
   color: var(--font_color);
   text-decoration: none !important;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .appbarLink {
@@ -38,6 +38,8 @@ h1,h2,h3,h4,h5,h6, p {
 }
 
 .themeToggle {
+  text-transform: capitalize;
+  font-size: 16px !important;
   font-weight: 400;
 }
 
