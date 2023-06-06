@@ -113,10 +113,7 @@ li a {
   width: 200px;
 }
 
-
-
 @media screen and (max-width: 900px) {
-
   .MuiAutocomplete-root{
     width: 100% !important;
   }

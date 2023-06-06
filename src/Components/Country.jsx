@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Button, Stack, Chip } from '@mui/material';
+
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Country = () => {
   const { code } = useParams();
+  const navigate = useNavigate();
 
   const [data, setData] = useState([]);
 
@@ -25,15 +26,15 @@ const Country = () => {
 
   return (
     <>
-      <Link to="/">
-        <Button
-          variant="contained"
-          id="backButton"
-          startIcon={<ArrowBackIcon />}
-        >
-          Back
-        </Button>
-      </Link>
+      <Button
+        variant="contained"
+        id="backButton"
+        startIcon={<ArrowBackIcon />}
+        onClick={() => navigate(-1)}
+      >
+        Back
+      </Button>
+
       <div className="countryContainer">
         <div className="flag">
           <img src={data[0]?.flags.png} alt="flag" id="countryFlag" />
@@ -74,6 +75,20 @@ const Country = () => {
                   Object.values(data[0]?.languages).join(', ')}
               </p>
             </div>
+          </div>
+
+          <div className="borders">
+            <p className="inline">
+              <span className="bold">Border Countries:</span>
+            </p>
+
+            <Stack direction="row" spacing={1} className="inline stack">
+              {data[0]?.borders?.map((country, i) => (
+                <a href={`/country/${country}`} key={i}>
+                  <Chip label={country} clickable />
+                </a>
+              ))}
+            </Stack>
           </div>
         </div>
       </div>
