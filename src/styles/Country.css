@@ -14,8 +14,10 @@ p {
 }
 
 #countryFlag {
-   height: 100% !important;
-   max-width: 560px;
+  height: 100%;
+  max-height: 700px;
+  min-width: 300px;
+  width: 100%;
 }
 
 #backButton {

@@ -25,7 +25,7 @@ export default function ButtonAppBar({ isDarkTheme, setIsDarkTheme }) {
             <div className="grid-container">
               <div className="left-element">
                 {' '}
-                <Link to="/" className="appbarLink">
+                <Link to="/restCountries" className="appbarLink">
                   <h4 className="appbarHeader">Where in the world?</h4>
                 </Link>
               </div>
