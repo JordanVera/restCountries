@@ -6,7 +6,13 @@ body {
   margin: 0;
 }
 
-h1,h2,h3,h4,h5,h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -52,11 +58,12 @@ h1,h2,h3,h4,h5,h6, p {
   font-weight: 200;
 }
 
- .appbarHeader {
+.appbarHeader {
   margin: 0 !important;
 }
 
- .MuiToolbar-root, #appbar {
+.MuiToolbar-root,
+#appbar {
   background-color: var(--blue2) !important;
   height: 80px;
 }
@@ -66,13 +73,13 @@ h1,h2,h3,h4,h5,h6, p {
   width: 100%;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr auto; /* Two columns with equal width */
+  grid-template-columns: 1fr auto;
+  /* Two columns with equal width */
 }
 
 .cards {
   max-width: 100%;
   margin: 0 auto;
-  display: grid;
   gap: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
@@ -90,8 +97,8 @@ h1,h2,h3,h4,h5,h6, p {
 
 .card .MuiCardMedia-root {
   height: 160px !important;
-object-fit: cover;
-width: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .card .MuiCardContent-root {
@@ -103,19 +110,19 @@ width: 100%;
   width: 100%;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
 }
 
 .left-element {
-  grid-column-start: 1; 
-  grid-column-end: 2; 
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .right-element {
-  justify-self: end; 
+  justify-self: end;
 }
 
-.filters .MuiInputBase-root{
+.filters .MuiInputBase-root {
   background-color: var(--blue2);
 }
 
@@ -123,7 +130,7 @@ ul {
   padding: 0 !important;
 }
 
- li {
+li {
   background-color: var(--blue2) !important;
 }
 
@@ -132,25 +139,25 @@ li a {
   text-decoration: none;
 }
 
- .MuiAutocomplete-root  {
+.MuiAutocomplete-root {
   width: 480px !important;
 }
 
- .MuiFormControl-root #filter  {
+.MuiFormControl-root #filter {
   width: 154px;
 }
 
 @media screen and (max-width: 900px) {
-  .MuiAutocomplete-root{
+  .MuiAutocomplete-root {
     width: 100% !important;
   }
 
   .filters {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
   .filters .right-element {
-    justify-self: start; 
+    justify-self: start;
   }
 }
